@@ -14,8 +14,8 @@
         <module>consumer</module>
     </modules>
     <properties>
-        <spring-boot.version>2.3.1.RELEASE</spring-boot.version>
-        <dubbo.version>2.7.8</dubbo.version>
+        <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
+        <dubbo.version>2.7.6</dubbo.version>
         <nacos-config-spring-boot.version>0.2.7</nacos-config-spring-boot.version>
     </properties>
 
@@ -66,38 +66,15 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>${nacos-config-spring-boot.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <!-- Spring Boot dependencies -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <!-- Dubbo Spring Boot Starter -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-client</artifactId>
-        </dependency>
-
-
-
-
-    </dependencies>
     <repositories>
-
-
         <repository>
             <id>maven-ali</id>
             <name>maven-ali</name>

@@ -2,10 +2,10 @@ package com.ycj.service.impl;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.ycj.service.DemoService;
-import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
-@DubboService(version = "1.0.0",group = "ycj")
+@Service(version = "1.0.0", group = "ycj")
 public class DefaultDemoService implements DemoService {
 
     /**
@@ -15,7 +15,8 @@ public class DefaultDemoService implements DemoService {
     private String serviceName;
     @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
     private boolean useLocalCache;
+
     public String sayHello(String name) {
-        return String.format("[%s] : Hello, %s:%s", serviceName, name,useLocalCache);
+        return String.format("[%s] : Hello, %s:%s", serviceName, name, useLocalCache);
     }
 }
