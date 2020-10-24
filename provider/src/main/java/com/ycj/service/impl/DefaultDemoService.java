@@ -1,5 +1,6 @@
 package com.ycj.service.impl;
 
+import com.alibaba.boot.nacos.config.autoconfigure.NacosConfigApplicationContextInitializer;
 import com.alibaba.nacos.api.config.annotation.NacosValue;
 import com.ycj.service.DemoService;
 import org.apache.dubbo.config.annotation.Service;
